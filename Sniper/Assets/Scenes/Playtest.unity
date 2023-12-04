@@ -911,6 +911,7 @@ GameObject:
   - component: {fileID: 1193152261}
   - component: {fileID: 1193152264}
   - component: {fileID: 1193152265}
+  - component: {fileID: 1193152266}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -991,6 +992,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TriggerObject: {fileID: 558076580}
+--- !u!114 &1193152266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193152260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fc8e397f8c70d448dfbf4d9b43fb98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 12
+  BulletPrefab: {fileID: 7534192725090126821, guid: 87e212e87981098438d4a2cc5e6c1749,
+    type: 3}
+  SpawnPoint: {fileID: 1193152263}
+  ShootSpeed: 900
+  Gravity: 9.8
+  BulletLife: 5
+  InitialVelocity: 0
+  angle: 0
+  Fire:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Fire
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d439b813-9004-4a9e-9060-8ee133d0ba9a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
 --- !u!1 &1415136338
 GameObject:
   m_ObjectHideFlags: 0
