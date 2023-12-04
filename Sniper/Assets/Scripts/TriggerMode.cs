@@ -5,6 +5,7 @@ using UnityEngine;
 public class TriggerMode : MonoBehaviour
 {
     public GameObject TriggerObject;
+    public GameObject Canvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class TriggerMode : MonoBehaviour
     {
         if (other.gameObject.tag == "TriggerDetect")
         {
+            Canvas.SetActive(true);
             Debug.Log("This works");
         }
     }
