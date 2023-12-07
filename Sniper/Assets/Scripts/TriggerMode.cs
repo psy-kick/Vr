@@ -6,6 +6,7 @@ public class TriggerMode : MonoBehaviour
 {
     public GameObject TriggerObject;
     public GameObject Canvas;
+    public GameObject GunVfx;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +22,16 @@ public class TriggerMode : MonoBehaviour
     {
         if (other.gameObject.tag == "TriggerDetect")
         {
+            GunVfx.SetActive(false);
             Canvas.SetActive(true);
-            Debug.Log("This works");
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "TriggerDetect")
+        {
+            GunVfx.SetActive(true);
+            Canvas.SetActive(false);
         }
     }
 }
