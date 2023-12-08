@@ -11,7 +11,8 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 35c575bb0261e0446a77e7f0bd74e71f,
     type: 3}
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -39,12 +40,26 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaClip: 1
+    - _Blend: 2
     - _CamSize: 0
+    - _CastShadows: 1
+    - _Cull: 2
+    - _DstBlend: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Thickness: 0
+    - _ReceiveShadows: 1
+    - _SrcBlend: 5
+    - _Surface: 1
+    - _Thickness: 0.01
+    - _WorkflowMode: 1
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteControl: 0
+    - _ZoomVal: 174.13
     m_Colors:
-    - _CrossHairColor: {r: 0, g: 0, b: 0, a: 0}
+    - _CrossHairColor: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 0}
+    - _ObjectScreenPos: {r: 0.25, g: 0.25, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8131656287630513863
 MonoBehaviour:
