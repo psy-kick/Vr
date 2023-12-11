@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gun
   - TriggerDetect
+  - Enemy
   layers:
   - Default
   - TransparentFX

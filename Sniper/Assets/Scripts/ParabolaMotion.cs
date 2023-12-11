@@ -58,20 +58,20 @@ public class ParabolaMotion : MonoBehaviour
         Vector3 NextPoint = FindPoint(NextTime);
         if (PrevTime > 0)
         {
-            //Vector3 PrevPoint = FindPoint(PrevTime);
-            //if (CastRay(PrevPoint, NextPoint, out hit))
-            //{
-            //    ShotObjects shotObjects = hit.transform.GetComponent<ShotObjects>();
-            //    shotObjects.OnHit(hit);
-            //}
+            Vector3 PrevPoint = FindPoint(PrevTime);
+            if (CastRay(PrevPoint, NextPoint, out hit))
+            {
+                ShotObjects shotObjects = hit.transform.GetComponent<ShotObjects>();
+                shotObjects.OnHit(hit);
+            }
         }
         if (CastRay(CurrentPoint, NextPoint, out hit))
         {
-            //ShotObjects shotObjects = hit.transform.GetComponent<ShotObjects>();
-            //if (shotObjects)
-            //{
-            //    shotObjects.OnHit(hit);
-            //}
+            ShotObjects shotObjects = hit.transform.GetComponent<ShotObjects>();
+            if (shotObjects)
+            {
+                shotObjects.OnHit(hit);
+            }
             gameObject.SetActive(false);
         }
     }
