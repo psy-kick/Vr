@@ -42,7 +42,7 @@ Material:
     m_Floats:
     - _AlphaClip: 1
     - _Blend: 2
-    - _CamSize: 0
+    - _CamSize: 0.47
     - _CastShadows: 1
     - _Cull: 2
     - _DstBlend: 1
@@ -58,7 +58,7 @@ Material:
     - _ZWriteControl: 0
     - _ZoomVal: 174.13
     m_Colors:
-    - _CrossHairColor: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 0}
+    - _CrossHairColor: {r: 0, g: 0, b: 0, a: 0}
     - _ObjectScreenPos: {r: 0.25, g: 0.25, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8131656287630513863

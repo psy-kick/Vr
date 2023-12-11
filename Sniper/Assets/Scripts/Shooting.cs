@@ -13,12 +13,19 @@ public class Shooting : MonoBehaviour
     public float ShootSpeed;
     public float Gravity;
     public float BulletLife;
-    public InputActionProperty Fire;
+    [HideInInspector]
+    public InputAction RightTrigger;
+    [SerializeField]
+    private ActionBasedController RightHandController;
+    // Start is called before the first frame update
+    void Start()
+    {
+        RightTrigger = RightHandController.activateAction.reference;
+    }
     // Update is called once per frame
     void Update()
     {
-        float Trigger = Fire.action.ReadValue<float>();
-        if(Trigger > 0)
+        if(RightTrigger.IsPressed() && TriggerMode.ModeInstance.canShoot)
         {
             Shoot();
         }
@@ -46,11 +53,6 @@ public class Shooting : MonoBehaviour
         //        Debug.DrawRay(ray.origin, ray.direction * 100f, Color.green, 1.0f);
         //    }
         //}
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-
     }
 }
 

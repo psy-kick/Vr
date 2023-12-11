@@ -5,14 +5,22 @@ using UnityEngine;
 
 public class TriggerMode : MonoBehaviour
 {
+    public static TriggerMode ModeInstance;
     public GameObject TriggerObject;
     public GameObject Canvas;
     public GameObject GunVfx;
-    public Camera Camera;
-    [SerializeField]
-    private float NormalFov = 60;
-    [SerializeField]
-    private float ZoomFov = 20;
+    public bool canShoot = false;
+    private void Awake()
+    {
+        if(ModeInstance != null && ModeInstance != this)
+        {
+            return; 
+        }
+        else
+        {
+            ModeInstance = this;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +38,7 @@ public class TriggerMode : MonoBehaviour
         {
             GunVfx.SetActive(false);
             Canvas.SetActive(true);
-            Camera.fieldOfView = ZoomFov;
+            canShoot = true;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -39,7 +47,12 @@ public class TriggerMode : MonoBehaviour
         {
             GunVfx.SetActive(true);
             Canvas.SetActive(false);
-            Camera.fieldOfView = NormalFov;
+            NewMethod();
         }
+    }
+
+    private void NewMethod()
+    {
+        canShoot = false;
     }
 }
