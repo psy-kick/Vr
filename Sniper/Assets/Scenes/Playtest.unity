@@ -892,7 +892,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6704560157297127848, guid: a15133d8898d400449f7c21aef33e511,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 68964be8bdee1184bb846f25b0dd3474, type: 2}
+    m_RemovedComponents:
+    - {fileID: 6704560157297127848, guid: a15133d8898d400449f7c21aef33e511, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a15133d8898d400449f7c21aef33e511, type: 3}
 --- !u!1001 &424783264
 PrefabInstance:
@@ -2396,7 +2402,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1533555927}
   m_OriginBaseGameObject: {fileID: 1193152260}
   m_CameraFloorOffsetObject: {fileID: 678835624}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 1.1176
 --- !u!4 &1193152263
 Transform:
@@ -3470,6 +3476,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 304651377200312741, guid: 7a3e76d3ba476dc43adbe00faa26df0d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 68964be8bdee1184bb846f25b0dd3474, type: 2}
     - target: {fileID: 5970218416771328991, guid: 7a3e76d3ba476dc43adbe00faa26df0d,
         type: 3}
       propertyPath: m_RootOrder
@@ -3550,7 +3561,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 304651377200312741, guid: 7a3e76d3ba476dc43adbe00faa26df0d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a3e76d3ba476dc43adbe00faa26df0d, type: 3}
 --- !u!1 &1416143688 stripped
 GameObject:
