@@ -17,6 +17,7 @@ public class Shooting : MonoBehaviour
     public InputAction RightTrigger;
     [SerializeField]
     private ActionBasedController RightHandController;
+    public AudioSource Shootaudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class Shooting : MonoBehaviour
         if(RightTrigger.IsPressed() && TriggerMode.ModeInstance.canShoot)
         {
             Shoot();
+            Shootaudio.Play();
         }
     }
     private void Shoot()
@@ -37,22 +39,8 @@ public class Shooting : MonoBehaviour
         if (BulletScript)
         {
             BulletScript.Initialized(SpawnPoint, Gravity, ShootSpeed);
-            //BulletScript.StartCoroutine(BulletScript.ShotBullet(groundDirection.normalized, InitialVelocity, angle));
-            //BulletScript.StartCoroutine(BulletScript.RayParabola(ShootSpeed));
         }
         Destroy(Bullet, BulletLife);
-        //Vector3 ScreenCenter = new Vector3(0.5f, 0.5f, 0f);
-        //RaycastHit hit;
-        //Ray ray = cam.ViewportPointToRay(ScreenCenter);
-        //Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 1.0f);
-        //if (Physics.Raycast(ray, out hit))
-        //{
-        //    Debug.Log(hit.collider.gameObject.name);
-        //    if (hit.collider.gameObject.tag == "Wall")
-        //    {
-        //        Debug.DrawRay(ray.origin, ray.direction * 100f, Color.green, 1.0f);
-        //    }
-        //}
     }
 }
 
